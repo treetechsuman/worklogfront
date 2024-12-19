@@ -1,21 +1,25 @@
 import React, { useState } from 'react'
 import './App.css'
-import {Button} from './components'
+import {Button, MobileNav} from './components'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 function App() {
-  
-  const handleClick=()=>{
-    alert("Button Clicked")
-  }
+  const brand = { name: "WorkLog", href: "/"}
+  const links = [
+    { label: "Home", href: "/" },
+    { label: "About", href: "/about" },
+    { label: "Services", href: "/services" },
+    { label: "Contact", href: "/contact" },
+  ];
   
 
   return (
-    <>
-      <h1>This is app component</h1>
-      <Button variant='success' size="sm" onClick={handleClick}>Click Me</Button>
-    </>
+    <div className='container'>
+      <MobileNav brand={brand} links={links} bg="dark" variant="dark" ></MobileNav>
+      <Button variant='success' size="sm" >Click Me</Button>
+    </div>
   )
 }
-import 'bootstrap/dist/css/bootstrap.min.css';
+
 export default App
