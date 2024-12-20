@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import './App.css'
-import {Button, MobileNav} from './components'
-import 'bootstrap/dist/css/bootstrap.min.css';
+import {Button, MobileNav, ScrollMobileNav} from './components'
+//import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 function App() {
@@ -11,13 +11,22 @@ function App() {
     { label: "About", href: "/about" },
     { label: "Services", href: "/services" },
     { label: "Contact", href: "/contact" },
+    { label: "About", href: "/about" },
+    { label: "Services", href: "/services" },
+    { label: "Contact", href: "/contact" },
+    { label: "About", href: "/about" },
+    { label: "Services", href: "/services" },
+    { label: "Contact", href: "/contact" },
+    { label: "About", href: "/about" },
+    { label: "Services", href: "/services" },
+    { label: "Contact", href: "/contact" },
   ];
   
 
   return (
-    <div className='container'>
-      <MobileNav brand={brand} links={links} bg="dark" variant="dark" ></MobileNav>
-      <Button variant='success' size="sm" >Click Me</Button>
+    <div className='container-fluid'>
+      
+      <ScrollMobileNav brand={brand} links={links}></ScrollMobileNav>
     </div>
   )
 }

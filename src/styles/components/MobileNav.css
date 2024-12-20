@@ -1,0 +1,18 @@
+/* Ensure the Nav container scrolls horizontally */
+.navbar .me-auto {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    scrollbar-width: thin; /* For Firefox */
+    -ms-overflow-style: none; /* For Internet Explorer and Edge */
+  }
+  
+  .navbar .me-auto::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for Webkit browsers */
+  }
+  
+  /* Optional: Add spacing between Nav links */
+  .navbar .nav-link {
+    flex: 0 0 auto; /* Prevent shrinking */
+    margin-right: 10px; /* Adjust spacing as needed */
+  }
