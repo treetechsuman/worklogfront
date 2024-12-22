@@ -1,82 +1,140 @@
-.nav-contianer{
+/* General Dark and Light Modes */
+.dark {
+    background-color: #121212;
+    color: #FFFFFF;
+}
+
+.light {
+    background-color: #FFFFFF;
+    color: #121212;
+}
+
+.dark a {
+    color: #FFFFFF;
+}
+
+.light a {
+    color: #121212;
+}
+
+/* Fixed navbar styles */
+.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    width: 100%;
+    padding: 10px 0;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3); /* Slightly improved shadow for depth */
+}
+
+/* Navbar container (flex layout) */
+.nav-contianer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #121212;
-    box-shadow: 1px 1px 1px #000000; 
-    position: fixed;  /* Make the navbar fixed */
-    top: 0;  /* Stick to the top of the viewport */
-    left: 0;  /* Align to the left of the page */
-    right: 0;  /* Ensure it spans the full width */
-    z-index: 1000;  /* Ensure the navbar stays on top of other content */
-    width: 100%; /* Ensure it spans the full width of the page */
-    padding: 1px 0; /* Adjust padding as necessary */
-
+    padding: 0 20px; /* Added padding to the sides */
 }
 
+/* Brand container */
 .brand {
-    color: #FFFFFF;
-    float: left;
     display: flex;
-    flex-wrap: wrap;
-    align-content: center;
+    align-items: center;
+    padding-right: 15px;
     min-width: max-content;
-    padding: 10px 20px;
-   
 }
-.brand a{
-    color: #FFFFFF;
+
+.brand a {
     text-decoration: none;
     font-size: 1.5rem;
     font-weight: 600;
+    color: inherit;
+    transition: color 0.3s ease;
 }
 
+.brand a:hover {
+    color: #9A031E; /* Color change on hover */
+}
+
+/* Scrollable navigation links container */
 .scroll-mobile-nav {
-    background-color: #121212;
-
-}
-
-div.scroll-mobile-nav {
-    background-color: #121212;
-    overflow: auto;
+    display: flex;
+    overflow-x: auto; /* Enable scrolling */
+    padding-right: 15px;
     white-space: nowrap;
+    animation: scrollLinks 1s ease-out forwards;
 }
 
-
-div.scroll-mobile-nav a {
+/* Navigation links */
+.scroll-mobile-nav a {
     display: inline-block;
-    color: #FFFFFF;
     text-align: center;
-    padding-top: 14px;
-    padding-left: 14px;
-    padding-right: 14px;
-    padding-bottom: 8px;
+    padding: 14px 20px;
     text-decoration: none;
+    font-size: 1rem;
+    color: inherit;
+    transition: background-color 0.3s, color 0.3s;
 }
 
-div.scroll-mobile-nav a:hover {
+/* Hover effect for links */
+.scroll-mobile-nav a:hover {
     background-color: #9A031E;
+    color: #FFFFFF;
 }
 
-/* width */
+/* Scrollbar styles */
 .scroll-mobile-nav::-webkit-scrollbar {
     height: 5px;
 }
 
-/* Track */
 .scroll-mobile-nav::-webkit-scrollbar-track {
-    box-shadow: #E2E8CE;
+    background: #f1f1f1;
     border-radius: 2px;
 }
 
-/* Handle */
 .scroll-mobile-nav::-webkit-scrollbar-thumb {
     background: #9A031E;
     border-radius: 2px;
 }
 
-/* Handle on hover */
 .scroll-mobile-nav::-webkit-scrollbar-thumb:hover {
     background: #E2E8CE;
+}
 
+/* Animation for horizontal scroll */
+@keyframes scrollLinks {
+    0% {
+        transform: translateX(100%); /* Start from the far right */
+    }
+    50% {
+        transform: translateX(-5%); /* Return to initial position */
+    }
+    100% {
+        transform: translateX(0); /* Return to initial position */
+    }
+}
+/* Responsive styles */
+@media (max-width: 568px) {
+    .brand a {
+        /*color: #FFFFFF;*/
+        text-decoration: none;
+        font-size: 1.3rem;
+        font-weight: 600;
+    }
+
+    div.scroll-mobile-nav a {
+        display: inline-block;
+        text-align: center;
+        padding-top: 25px;
+        padding-left: 14px;
+        padding-right: 14px;
+        padding-bottom: 19px;
+        text-decoration: none;
+        border-left: 1px solid #333333;
+        min-width: 100px;
+        font-size: 18px;
+        line-height: 1.5; /* Improve readability */
+
+    }
 }

@@ -1,0 +1,27 @@
+/* Default light mode */
+body.light {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+/* Dark mode styles */
+body.dark {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+.dark a {
+    color: #FFFFFF;
+}
+
+.light a {
+    color: #121212;
+}
+
+/* Button styling */
+button {
+    padding: 10px 20px;
+    margin-top: 20px;
+    font-size: 16px;
+    cursor: pointer;
+}

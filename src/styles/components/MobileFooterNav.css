@@ -1,0 +1,34 @@
+.mobile-footer-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    border-top: 1px solid #ccc;
+    padding: 10px 0;
+  }
+  
+  .mobile-footer-nav ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .mobile-footer-nav li {
+    text-align: center;
+  }
+  
+  .mobile-footer-nav a {
+    text-decoration: none;
+    display: block;
+  }
+  
+  .mobile-footer-nav a span {
+    display: block;
+    font-size: 12px;
+    margin-top: 5px;
+  }
+  
+  
+ 
