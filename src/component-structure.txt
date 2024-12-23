@@ -37,3 +37,4 @@ src/
 └── index.js
 
 <MobileNav brand={brand} links={links} bg="dark" variant="dark" ></MobileNav>
+ <Nav brand={brand}></Nav>
